@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#409EFF;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#409EFF;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#67C23A;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E6A23C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F56C6C;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <!-- 主背景圆形 -->
+  <circle cx="64" cy="64" r="56" fill="url(#primaryGrad)" filter="url(#shadow)"/>
+  <circle cx="64" cy="64" r="56" fill="none" stroke="#fff" stroke-width="2" opacity="0.8"/>
+  
+  <!-- 试卷文档主体 -->
+  <rect x="32" y="24" width="64" height="80" rx="6" fill="#fff" stroke="#E4E7ED" stroke-width="2" filter="url(#shadow)"/>
+  
+  <!-- 试卷顶部装饰条 -->
+  <rect x="32" y="24" width="64" height="12" rx="6" fill="url(#accentGrad)" rx="6"/>
+  <rect x="32" y="30" width="64" height="6" fill="url(#accentGrad)" opacity="0.3"/>
+  
+  <!-- 试卷标题区域 -->
+  <rect x="36" y="44" width="32" height="3" rx="1.5" fill="#909399" opacity="0.6"/>
+  <rect x="36" y="50" width="24" height="2" rx="1" fill="#C0C4CC" opacity="0.8"/>
+  
+  <!-- 选择题选项组 -->
+  <!-- 第一题 - 已选中 -->
+  <circle cx="40" cy="62" r="4" fill="url(#accentGrad)"/>
+  <rect x="48" y="60" width="32" height="2" rx="1" fill="#C0C4CC"/>
+  <path d="M37 62 L39 64 L43 60" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- 第二题 -->
+  <circle cx="40" cy="74" r="4" fill="#E4E7ED"/>
+  <rect x="48" y="72" width="28" height="2" rx="1" fill="#C0C4CC"/>
+  
+  <!-- 第三题 -->
+  <circle cx="40" cy="86" r="4" fill="#E4E7ED"/>
+  <rect x="48" y="84" width="35" height="2" rx="1" fill="#C0C4CC"/>
+  
+  <!-- 装饰性元素 - 铅笔 -->
+  <g transform="translate(76, 88)">
+    <path d="M0 12 L2 10 L10 2 L14 6 L6 14 L4 16 L0 12 Z" fill="url(#accentGrad)"/>
+    <path d="M10 2 L14 6" stroke="#fff" stroke-width="1"/>
+    <path d="M0 12 L4 16 L0 16 Z" fill="#909399"/>
+    <!-- 铅笔尖 -->
+    <circle cx="12" cy="4" r="1" fill="#FFD700"/>
+  </g>
+  
+  <!-- 装饰性星星 -->
+  <g transform="translate(20, 20)">
+    <path d="M0 4 L1.5 1.5 L4 0 L1.5 -1.5 L0 -4 L-1.5 -1.5 L-4 0 L-1.5 1.5 Z" fill="#FFD700" opacity="0.9"/>
+  </g>
+  
+  <g transform="translate(100, 28)">
+    <path d="M0 3 L1 1 L3 0 L1 -1 L0 -3 L-1 -1 L-3 0 L-1 1 Z" fill="#FFD700" opacity="0.7"/>
+  </g>
+  
+  <g transform="translate(108, 96)">
+    <path d="M0 2.5 L0.8 0.8 L2.5 0 L0.8 -0.8 L0 -2.5 L-0.8 -0.8 L-2.5 0 L-0.8 0.8 Z" fill="#67C23A" opacity="0.8"/>
+  </g>
+  
+  <!-- 光泽效果 -->
+  <ellipse cx="48" cy="40" rx="16" ry="8" fill="#fff" opacity="0.3"/>
+</svg>

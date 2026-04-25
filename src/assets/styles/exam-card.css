@@ -1,0 +1,516 @@
+/* 高端现代化考试中心公共样式 - Premium Edition */
+/* 用于 myExam.vue (考试) 和 startExam.vue (练习) */
+
+/* ------------------- 布局容器 ------------------- */
+.wrapper {
+  background: transparent;
+}
+
+/* 玻璃态搜索卡片 */
+.ruoyi-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.12);
+  margin-bottom: 32px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ruoyi-card:hover {
+  box-shadow: 0 12px 48px rgba(102, 126, 234, 0.18);
+  transform: translateY(-2px);
+}
+
+.search-card {
+  padding: 28px 32px;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.06) 0%, rgba(240, 147, 251, 0.04) 100%);
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search-form .el-form-item {
+  margin-bottom: 0;
+  margin-right: 24px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.search-form .el-form-item__content {
+  display: inline-flex;
+  align-items: center;
+}
+
+.search-form .el-form-item__label {
+  font-weight: 700;
+  color: #374151;
+  font-size: 14px;
+  line-height: normal;
+  padding-right: 12px;
+}
+
+/* 网格布局容器 */
+.exam-grid-container,
+.practice-grid-container {
+  margin-bottom: 40px;
+  min-height: 400px;
+}
+
+.exam-grid,
+.practice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 28px;
+  padding: 0;
+  margin: 0;
+  align-items: start;
+}
+
+.exam-item,
+.practice-item {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: cardSlideIn 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  opacity: 0;
+  transform: translateY(40px) scale(0.95);
+}
+
+@keyframes cardSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ------------------- 卡片样式 ------------------- */
+.exam-card,
+.practice-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(102, 126, 234, 0.1);
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 500px;
+}
+
+.exam-card::before,
+.practice-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  transition: all 0.4s ease;
+}
+
+.exam-card::after,
+.practice-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0) 0%, rgba(240, 147, 251, 0.05) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.exam-card:hover,
+.practice-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 24px 60px rgba(102, 126, 234, 0.2), 0 0 0 1px rgba(102, 126, 234, 0.2);
+}
+
+.exam-card:hover::before,
+.practice-card:hover::before {
+  height: 6px;
+}
+
+.exam-card:hover::after,
+.practice-card:hover::after {
+  opacity: 1;
+}
+
+/* 卡片头部 */
+.card-header {
+  padding: 24px 28px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.06) 0%, rgba(240, 147, 251, 0.04) 100%);
+}
+
+/* 徽章样式 */
+.exam-type-badge,
+.practice-type-badge {
+  padding: 8px 18px;
+  border-radius: 24px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.badge-primary {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
+  color: #667eea;
+}
+
+.badge-important {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.12) 0%, rgba(248, 113, 113, 0.15) 100%);
+  color: #ef4444;
+}
+
+.badge-warning {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.12) 0%, rgba(251, 191, 36, 0.15) 100%);
+  color: #f59e0b;
+}
+
+.badge-info {
+  background: linear-gradient(135deg, rgba(107, 114, 128, 0.1) 0%, rgba(156, 163, 175, 0.12) 100%);
+  color: #6b7280;
+}
+
+.badge-default {
+  background: rgba(107, 114, 128, 0.08);
+  color: #6b7280;
+}
+
+.badge-success {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.12) 0%, rgba(52, 211, 153, 0.15) 100%);
+  color: #10b981;
+}
+
+.badge-practice {
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+}
+
+/* 状态标签 */
+.exam-status,
+.practice-status {
+  padding: 6px 14px;
+  border-radius: 16px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.status-available {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.12) 0%, rgba(52, 211, 153, 0.15) 100%);
+  color: #10b981;
+}
+
+/* 卡片内容 */
+.card-content {
+  padding: 0 28px 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.exam-title,
+.practice-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin: 0 0 14px 0;
+  line-height: 1.4;
+  background: linear-gradient(135deg, #1a1a2e 0%, #374151 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.exam-description,
+.practice-description {
+  font-size: 15px;
+  color: #6b7280;
+  margin: 0 0 24px 0;
+  line-height: 1.7;
+  font-weight: 500;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* 信息网格 */
+.exam-info-grid,
+.practice-info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  padding: 14px 18px;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.04) 0%, rgba(240, 147, 251, 0.02) 100%);
+  border-radius: 14px;
+  border: 1px solid rgba(102, 126, 234, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.info-item:hover {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(240, 147, 251, 0.04) 100%);
+  border-color: rgba(102, 126, 234, 0.15);
+  transform: translateX(6px);
+}
+
+.info-icon {
+  font-size: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-right: 14px;
+  width: 24px;
+  text-align: center;
+}
+
+.info-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.info-label {
+  font-size: 11px;
+  color: #9ca3af;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.info-value {
+  font-size: 14px;
+  color: #374151;
+  font-weight: 700;
+}
+
+/* 提示信息 */
+.exam-tips,
+.practice-tips {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.08) 0%, rgba(251, 191, 36, 0.05) 100%);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  border-radius: 14px;
+  padding: 18px;
+  margin: 20px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.tips-icon {
+  color: #f59e0b;
+  font-size: 20px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.tips-content {
+  font-size: 14px;
+  color: #92400e;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* 卡片底部 */
+.card-footer {
+  padding: 22px 28px;
+  background: linear-gradient(135deg, rgba(248, 250, 252, 0.9) 0%, rgba(241, 245, 249, 0.9) 100%);
+  border-top: 1px solid rgba(102, 126, 234, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.exam-btn,
+.practice-btn {
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 14px;
+  height: 44px;
+  padding: 0 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  border: none !important;
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.35);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: 0.5px;
+}
+
+.exam-btn:hover,
+.practice-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.45);
+}
+
+.exam-code,
+.practice-code {
+  font-size: 12px;
+  color: #9ca3af;
+  font-weight: 600;
+  font-family: 'Monaco', 'Menlo', monospace;
+  background: rgba(102, 126, 234, 0.06);
+  padding: 8px 14px;
+  border-radius: 10px;
+  letter-spacing: 0.5px;
+}
+
+/* ------------------- 分页样式 ------------------- */
+.pagination-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  margin-top: 8px;
+}
+
+.pagination-wrapper /deep/ .el-pagination {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 8px 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.pagination-wrapper /deep/ .el-pagination.is-background .el-pager li {
+  background: transparent;
+  border-radius: 8px;
+  font-weight: 600;
+  margin: 0 4px;
+}
+
+.pagination-wrapper /deep/ .el-pagination.is-background .el-pager li:not(.disabled).active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+  color: #fff;
+}
+
+.pagination-wrapper /deep/ .el-pagination.is-background .btn-prev,
+.pagination-wrapper /deep/ .el-pagination.is-background .btn-next {
+  background: transparent;
+  border-radius: 8px;
+}
+
+.pagination-wrapper /deep/ .el-pagination.is-background .btn-prev:hover,
+.pagination-wrapper /deep/ .el-pagination.is-background .btn-next:hover,
+.pagination-wrapper /deep/ .el-pagination.is-background .el-pager li:not(.disabled):hover {
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+}
+
+/* ------------------- 标题与加载 ------------------- */
+#myExam .title {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 36px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -1px;
+  text-shadow: 0 4px 20px rgba(102, 126, 234, 0.2);
+  animation: titleGlow 3s ease-in-out infinite;
+}
+
+@keyframes titleGlow {
+
+  0%,
+  100% {
+    filter: drop-shadow(0 0 20px rgba(102, 126, 234, 0.3));
+  }
+
+  50% {
+    filter: drop-shadow(0 0 30px rgba(240, 147, 251, 0.4));
+  }
+}
+
+/* 加载动画优化 */
+.el-loading-mask {
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+}
+
+/* 滚动条美化 */
+.exam-info-grid::-webkit-scrollbar,
+.practice-info-grid::-webkit-scrollbar {
+  width: 5px;
+}
+
+.exam-info-grid::-webkit-scrollbar-track,
+.practice-info-grid::-webkit-scrollbar-track {
+  background: rgba(102, 126, 234, 0.05);
+  border-radius: 3px;
+}
+
+.exam-info-grid::-webkit-scrollbar-thumb,
+.practice-info-grid::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+  border-radius: 3px;
+}
+
+/* ------------------- 响应式设计 ------------------- */
+@media (max-width: 1200px) {
+  #myExam {
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  .exam-grid,
+  .practice-grid {
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  #myExam .title {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+  .search-card {
+    padding: 20px;
+  }
+
+  .exam-grid,
+  .practice-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .exam-grid,
+  .practice-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}

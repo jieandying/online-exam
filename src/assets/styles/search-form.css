@@ -1,0 +1,391 @@
+/* ==================== 统一查询表单样式 ==================== */
+
+/* 若依风格容器 */
+.ruoyi-container {
+  padding: 20px;
+  background-color: #f0f2f5;
+  min-height: calc(100vh - 120px);
+}
+
+/* 卡片基础样式 */
+.ruoyi-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.05);
+  margin-bottom: 16px;
+  overflow: hidden;
+  border: 1px solid #ebeef5;
+  transition: all 0.3s ease;
+}
+
+.ruoyi-card:hover {
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.08);
+}
+
+/* ==================== 搜索区域样式 ==================== */
+.search-card {
+  padding: 20px 20px 4px 20px;
+}
+
+.search-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.search-form .el-form-item {
+  margin-bottom: 16px;
+  margin-right: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.search-form .el-form-item__label {
+  font-weight: 500;
+  color: #606266;
+  padding-right: 8px;
+  font-size: 14px;
+  line-height: 32px;
+  white-space: nowrap;
+}
+
+.search-form .el-form-item__content {
+  line-height: 32px;
+}
+
+/* 输入框统一样式 */
+.search-form .el-input {
+  width: 200px !important;
+}
+
+.search-form .el-input__inner {
+  border-radius: 6px;
+  border-color: #dcdfe6;
+  transition: all 0.3s;
+}
+
+.search-form .el-input__inner:hover {
+  border-color: #c0c4cc;
+}
+
+.search-form .el-input__inner:focus {
+  border-color: #409EFF;
+  box-shadow: 0 0 0 2px rgba(64, 158, 255, 0.1);
+}
+
+/* 下拉框统一样式 */
+.search-form .el-select {
+  width: 200px !important;
+}
+
+.search-form .el-select .el-input__inner {
+  border-radius: 6px;
+}
+
+/* 搜索按钮样式 */
+.search-form .el-button {
+  border-radius: 6px;
+  font-weight: 500;
+  padding: 9px 0;
+  transition: all 0.3s;
+  width: 96px;
+}
+
+.search-form .el-button--primary {
+  background: linear-gradient(135deg, #409EFF 0%, #66b1ff 100%);
+  border: none;
+  box-shadow: 0 2px 8px rgba(64, 158, 255, 0.3);
+}
+
+.search-form .el-button--primary:hover {
+  background: linear-gradient(135deg, #66b1ff 0%, #409EFF 100%);
+  box-shadow: 0 4px 12px rgba(64, 158, 255, 0.4);
+  transform: translateY(-1px);
+}
+
+.search-form .el-button--default {
+  background: #fff;
+  border: 1px solid #dcdfe6;
+  color: #606266;
+}
+
+.search-form .el-button--default:hover {
+  color: #409EFF;
+  border-color: #c6e2ff;
+  background-color: #ecf5ff;
+}
+
+/* ==================== 工具栏样式 ==================== */
+.toolbar-card {
+  padding: 12px 20px;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toolbar-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.toolbar-left .el-button {
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 16px;
+  letter-spacing: 0.5px;
+}
+
+.toolbar-left .el-button--primary.is-plain {
+  background: linear-gradient(135deg, #409EFF 0%, #66b1ff 100%);
+  border: none;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(64, 158, 255, 0.3);
+}
+
+.toolbar-left .el-button--primary.is-plain:hover {
+  background: linear-gradient(135deg, #66b1ff 0%, #409EFF 100%);
+  box-shadow: 0 4px 12px rgba(64, 158, 255, 0.4);
+  transform: translateY(-1px);
+}
+
+.toolbar-left .el-button--danger.is-plain {
+  background: linear-gradient(135deg, #f56c6c 0%, #f78989 100%);
+  border: none;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(245, 108, 108, 0.3);
+}
+
+.toolbar-left .el-button--danger.is-plain:hover {
+  background: linear-gradient(135deg, #f78989 0%, #f56c6c 100%);
+  box-shadow: 0 4px 12px rgba(245, 108, 108, 0.4);
+  transform: translateY(-1px);
+}
+
+.toolbar-left .el-button--success.is-plain {
+  background: linear-gradient(135deg, #67c23a 0%, #85ce61 100%);
+  border: none;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(103, 194, 58, 0.3);
+}
+
+.toolbar-left .el-button--success.is-plain:hover {
+  background: linear-gradient(135deg, #85ce61 0%, #67c23a 100%);
+  box-shadow: 0 4px 12px rgba(103, 194, 58, 0.4);
+  transform: translateY(-1px);
+}
+
+.toolbar-left .el-button--warning.is-plain {
+  background: linear-gradient(135deg, #e6a23c 0%, #ebb563 100%);
+  border: none;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(230, 162, 60, 0.3);
+}
+
+.toolbar-left .el-button--warning.is-plain:hover {
+  background: linear-gradient(135deg, #ebb563 0%, #e6a23c 100%);
+  box-shadow: 0 4px 12px rgba(230, 162, 60, 0.4);
+  transform: translateY(-1px);
+}
+
+.toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.toolbar-right .el-button.is-circle {
+  background: linear-gradient(135deg, #409EFF 0%, #66b1ff 100%);
+  border: none;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(64, 158, 255, 0.3);
+}
+
+.toolbar-right .el-button.is-circle:hover {
+  transform: rotate(180deg);
+  box-shadow: 0 4px 12px rgba(64, 158, 255, 0.4);
+}
+
+/* ==================== 表格区域样式 ==================== */
+.table-card {
+  padding: 0;
+}
+
+.ruoyi-table {
+  width: 100%;
+}
+
+.ruoyi-table .el-table__header th {
+  background: #f5f7fa;
+  color: #606266;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.ruoyi-table .el-table__row:hover > td {
+  background-color: #f5f7fa !important;
+}
+
+.ruoyi-table .el-table__body td {
+  padding: 12px 0;
+}
+
+/* 操作列按钮样式 */
+.ruoyi-table .el-button--text {
+  padding: 0 8px;
+  font-size: 13px;
+}
+
+.ruoyi-table .el-button--text:first-child {
+  color: #409EFF;
+}
+
+/* ==================== 分页样式 ==================== */
+.ruoyi-pagination {
+  padding: 16px 20px;
+  display: flex;
+  justify-content: flex-end;
+  background: #fff;
+}
+
+.ruoyi-pagination .el-pagination__total {
+  font-weight: 500;
+  color: #606266;
+}
+
+.ruoyi-pagination .el-pager li {
+  border-radius: 4px;
+  margin: 0 2px;
+}
+
+.ruoyi-pagination .el-pager li.active {
+  background: linear-gradient(135deg, #409EFF 0%, #66b1ff 100%);
+  color: #fff;
+}
+
+.ruoyi-pagination .btn-prev,
+.ruoyi-pagination .btn-next {
+  border-radius: 4px;
+}
+
+/* ==================== 筛选卡片样式（另一种风格） ==================== */
+.filter-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px 20px 4px 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.05);
+  border: 1px solid #ebeef5;
+}
+
+.filter-card .el-form-item {
+  margin-bottom: 16px;
+  margin-right: 16px;
+}
+
+.filter-card .el-form-item__label {
+  font-weight: 500;
+  color: #606266;
+  font-size: 14px;
+}
+
+/* ==================== 页面头部样式 ==================== */
+.page-container {
+  padding: 20px;
+  background-color: #f0f2f5;
+  min-height: calc(100vh - 120px);
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 20px 24px;
+  background: linear-gradient(135deg, #fff 0%, #f8fafc 100%);
+  border-radius: 8px;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.05);
+  border: 1px solid #ebeef5;
+}
+
+.page-header .header-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header .page-title {
+  margin: 0 0 4px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #303133;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.page-header .page-title i {
+  color: #409EFF;
+  font-size: 22px;
+}
+
+.page-header .page-desc {
+  margin: 0;
+  font-size: 14px;
+  color: #909399;
+}
+
+/* ==================== 响应式适配 ==================== */
+@media (max-width: 1200px) {
+  .search-form .el-input,
+  .search-form .el-select {
+    width: 180px !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .search-form .el-input,
+  .search-form .el-select {
+    width: 160px !important;
+  }
+  
+  .search-form .el-form-item {
+    margin-right: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ruoyi-container,
+  .page-container {
+    padding: 12px;
+  }
+  
+  .search-card,
+  .filter-card {
+    padding: 16px 16px 4px 16px;
+  }
+  
+  .search-form .el-input,
+  .search-form .el-select {
+    width: 100% !important;
+  }
+  
+  .search-form .el-form-item {
+    width: 100%;
+    margin-right: 0;
+  }
+  
+  .toolbar {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .toolbar-left,
+  .toolbar-right {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}

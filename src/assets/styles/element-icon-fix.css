@@ -1,0 +1,440 @@
+/**
+ * Element UI 全局图标与文字重叠修复
+ * Global Fix for Element UI Icon-Text Overlap Issues
+ * 
+ * 解决的问题：
+ * 1. el-input 的 prefix-icon / suffix-icon 与输入文字重叠
+ * 2. el-button 的图标与按钮文字间距不合理
+ * 3. el-menu / el-submenu 菜单图标与文字重叠
+ * 4. el-form-item 标签、提示信息与图标重叠
+ * 5. 自定义图标（el-icon-*、svg-icon）与文本重叠
+ */
+
+/* ==================== 1. el-input 输入框修复 ==================== */
+
+/* 1.1 带前缀图标的输入框 - 增加左内边距 */
+.el-input--prefix .el-input__inner {
+  padding-left: 48px !important;
+}
+
+/* 1.2 带后缀图标的输入框 - 增加右内边距 */
+.el-input--suffix .el-input__inner {
+  padding-right: 48px !important;
+}
+
+/* 1.3 同时带前缀和后缀图标的输入框 */
+.el-input--prefix.el-input--suffix .el-input__inner {
+  padding-left: 48px !important;
+  padding-right: 48px !important;
+}
+
+/* 1.4 前缀图标容器 - 确保图标位置和对齐 */
+.el-input__prefix {
+  left: 10px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #909399;
+  transition: all 0.3s;
+}
+
+/* 1.5 后缀图标容器 - 确保图标位置和对齐 */
+.el-input__suffix {
+  right: 10px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #909399;
+  transition: all 0.3s;
+}
+
+/* 1.6 图标样式 - 统一图标大小 */
+.el-input__prefix .el-input__icon,
+.el-input__suffix .el-input__icon {
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  font-size: 16px;
+}
+
+/* 1.7 密码显示/隐藏按钮 - 确保不遮挡文字 */
+.el-input--suffix .el-input__inner[type="password"] {
+  padding-right: 48px !important;
+}
+
+/* 1.8 清除按钮 - 确保不遮挡文字 */
+.el-input__suffix .el-input__clear {
+  margin-right: 2px;
+}
+
+/* 1.9 输入框获得焦点时图标颜色变化 */
+.el-input.is-active .el-input__prefix,
+.el-input.is-active .el-input__suffix,
+.el-input__inner:focus ~ .el-input__prefix,
+.el-input__inner:focus ~ .el-input__suffix {
+  color: #409EFF;
+}
+
+/* 1.10 禁用状态的图标 */
+.el-input.is-disabled .el-input__prefix,
+.el-input.is-disabled .el-input__suffix {
+  color: #C0C4CC;
+}
+
+/* ==================== 2. el-button 按钮修复 ==================== */
+
+/* 2.1 带图标的按钮 - 图标与文字间距 */
+.el-button [class*="el-icon-"] + span {
+  margin-left: 8px;
+}
+
+/* 2.2 只有图标的按钮（圆形按钮） */
+.el-button.is-circle [class*="el-icon-"] + span {
+  margin-left: 0;
+}
+
+/* 2.3 按钮中的图标大小统一 */
+.el-button [class*="el-icon-"] {
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+/* 2.4 小尺寸按钮的图标 */
+.el-button--mini [class*="el-icon-"],
+.el-button--small [class*="el-icon-"] {
+  font-size: 14px;
+}
+
+/* 2.5 大尺寸按钮的图标 */
+.el-button--large [class*="el-icon-"] {
+  font-size: 18px;
+}
+
+/* 2.6 按钮内容居中对齐 */
+.el-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 2.7 图标按钮（只有图标） */
+.el-button.is-circle,
+.el-button.is-round {
+  padding: 12px 20px;
+}
+
+/* 2.8 下拉按钮组 */
+.el-button-group .el-button [class*="el-icon-"] {
+  margin-right: 4px;
+}
+
+/* ==================== 3. el-select 下拉选择框修复 ==================== */
+
+/* 3.1 带前缀图标的选择框 */
+.el-select .el-input--prefix .el-input__inner {
+  padding-left: 48px !important;
+}
+
+/* 3.2 选择框的后缀箭头不遮挡文字 */
+.el-select .el-input__suffix {
+  right: 10px !important;
+}
+
+/* 3.3 多选标签不被图标遮挡 */
+.el-select--multiple .el-select__tags {
+  padding-left: 8px;
+}
+
+/* ==================== 4. el-menu 菜单修复 ==================== */
+
+/* 4.1 菜单项图标与文字间距 */
+.el-menu-item [class*="el-icon-"],
+.el-submenu__title [class*="el-icon-"] {
+  margin-right: 10px;
+  width: 20px;
+  text-align: center;
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+/* 4.2 确保菜单文字不被图标遮挡 */
+.el-menu-item,
+.el-submenu__title {
+  display: flex;
+  align-items: center;
+  padding-left: 20px !important;
+}
+
+/* 4.3 子菜单图标 */
+.el-submenu .el-menu-item {
+  padding-left: 50px !important;
+}
+
+/* 4.4 收起状态的菜单 */
+.el-menu--collapse .el-menu-item [class*="el-icon-"],
+.el-menu--collapse .el-submenu__title [class*="el-icon-"] {
+  margin-right: 0;
+}
+
+/* ==================== 5. el-form 表单修复 ==================== */
+
+/* 5.1 表单标签中的图标 */
+.el-form-item__label [class*="el-icon-"] {
+  margin-right: 6px;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+/* 5.2 表单错误提示图标 */
+.el-form-item__error {
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* 5.3 必填标记与标签间距 */
+.el-form-item.is-required:not(.is-no-asterisk) .el-form-item__label::before {
+  margin-right: 4px;
+}
+
+/* ==================== 6. el-message / el-notification 消息提示修复 ==================== */
+
+/* 6.1 消息提示图标与文字间距 */
+.el-message__icon {
+  margin-right: 12px;
+  font-size: 18px;
+}
+
+.el-message p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* 6.2 通知图标与文字间距 */
+.el-notification__icon {
+  margin-right: 12px;
+  font-size: 24px;
+}
+
+/* ==================== 7. el-table 表格修复 ==================== */
+
+/* 7.1 表格单元格中的图标 */
+.el-table td [class*="el-icon-"],
+.el-table th [class*="el-icon-"] {
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+/* 7.2 操作列按钮组 */
+.el-table .el-button + .el-button {
+  margin-left: 8px;
+}
+
+/* ==================== 8. el-dialog 对话框修复 ==================== */
+
+/* 8.1 对话框标题图标 */
+.el-dialog__title [class*="el-icon-"] {
+  margin-right: 8px;
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+/* ==================== 9. el-breadcrumb 面包屑修复 ==================== */
+
+/* 9.1 面包屑项目图标 */
+.el-breadcrumb__item [class*="el-icon-"] {
+  margin-right: 6px;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+/* ==================== 10. el-tag 标签修复 ==================== */
+
+/* 10.1 标签中的图标 */
+.el-tag [class*="el-icon-"] {
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+/* 10.2 可关闭标签的关闭按钮 */
+.el-tag .el-tag__close {
+  margin-left: 6px;
+}
+
+/* ==================== 11. el-dropdown 下拉菜单修复 ==================== */
+
+/* 11.1 下拉菜单项图标 */
+.el-dropdown-menu__item [class*="el-icon-"] {
+  margin-right: 8px;
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+/* ==================== 12. el-tabs 标签页修复 ==================== */
+
+/* 12.1 标签页图标 */
+.el-tabs__item [class*="el-icon-"] {
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+/* ==================== 13. el-tooltip / el-popover 提示框修复 ==================== */
+
+/* 13.1 提示框中的图标 */
+.el-tooltip__popper [class*="el-icon-"],
+.el-popover [class*="el-icon-"] {
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+/* ==================== 14. el-tree 树形控件修复 ==================== */
+
+/* 14.1 树节点图标 */
+.el-tree-node__content [class*="el-icon-"] {
+  margin-right: 6px;
+  font-size: 16px;
+}
+
+/* ==================== 15. el-pagination 分页修复 ==================== */
+
+/* 15.1 分页按钮图标 */
+.el-pagination button [class*="el-icon-"] {
+  font-size: 14px;
+}
+
+/* ==================== 16. 自定义图标修复 ==================== */
+
+/* 16.1 iconfont 图标与文字间距 */
+.iconfont + span,
+span + .iconfont {
+  margin-left: 6px;
+}
+
+/* 16.2 svg-icon 与文字间距 */
+.svg-icon {
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+/* ==================== 17. 特殊场景修复 ==================== */
+
+/* 17.1 搜索框 */
+.search-input .el-input__inner {
+  padding-left: 48px !important;
+  padding-right: 48px !important;
+}
+
+/* 17.2 带清除按钮的输入框 */
+.el-input--suffix .el-input__suffix-inner {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* 17.3 日期选择器图标 */
+.el-date-editor .el-input__prefix {
+  left: 10px !important;
+}
+
+.el-date-editor .el-input__prefix + .el-input__inner {
+  padding-left: 48px !important;
+}
+
+/* 17.4 时间选择器图标 */
+.el-time-panel__btn {
+  padding: 0 10px;
+}
+
+/* ==================== 18. 响应式修复 ==================== */
+
+/* 平板端 */
+@media (max-width: 768px) {
+  /* 输入框间距适配 */
+  .el-input--prefix .el-input__inner {
+    padding-left: 44px !important;
+  }
+  
+  .el-input--suffix .el-input__inner {
+    padding-right: 44px !important;
+  }
+  
+  /* 按钮图标间距 */
+  .el-button [class*="el-icon-"] + span {
+    margin-left: 6px;
+  }
+  
+  /* 菜单图标间距 */
+  .el-menu-item [class*="el-icon-"],
+  .el-submenu__title [class*="el-icon-"] {
+    margin-right: 8px;
+    font-size: 16px;
+  }
+}
+
+/* 手机端 */
+@media (max-width: 480px) {
+  /* 输入框间距适配 */
+  .el-input--prefix .el-input__inner {
+    padding-left: 40px !important;
+  }
+  
+  .el-input--suffix .el-input__inner {
+    padding-right: 40px !important;
+  }
+  
+  /* 图标位置调整 */
+  .el-input__prefix {
+    left: 8px !important;
+  }
+  
+  .el-input__suffix {
+    right: 8px !important;
+  }
+  
+  /* 按钮图标间距 */
+  .el-button [class*="el-icon-"] + span {
+    margin-left: 4px;
+  }
+  
+  /* 消息提示图标间距 */
+  .el-message__icon {
+    margin-right: 8px;
+    font-size: 16px;
+  }
+}
+
+/* ==================== 19. 兼容性修复 ==================== */
+
+/* 确保图标垂直居中 */
+[class*="el-icon-"] {
+  vertical-align: middle;
+  line-height: 1;
+}
+
+/* 图标动画过渡 */
+[class*="el-icon-"] {
+  transition: all 0.3s ease;
+}
+
+/* 图标悬浮效果 */
+.el-button:hover [class*="el-icon-"],
+.el-menu-item:hover [class*="el-icon-"] {
+  transform: scale(1.1);
+}
+
+/* ==================== 20. Vue Deep 选择器支持 ==================== */
+
+/* 为 scoped 样式提供深度选择器支持 */
+/* Vue 2 使用 >>> 或 /deep/ */
+/* Vue 3 使用 :deep() */
+
+/* 这些样式已经是全局的，不需要深度选择器 */
+/* 但如果在组件中需要覆盖，可以这样使用： */
+/*
+/deep/ .el-input--prefix .el-input__inner {
+  padding-left: 48px !important;
+}
+*/

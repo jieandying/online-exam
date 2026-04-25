@@ -1,0 +1,57 @@
+/* ===== ElementUI 图标与文字重叠：全局修复（Vue2 + ElementUI） ===== */
+
+/* 1) el-input：有前缀图标时，给左边腾位置（Element 自带 prefix-icon） */
+.el-input--prefix .el-input__inner {
+  padding-left: 44px !important;   /* 40~56 都可，44比较舒服 */
+}
+
+/* 2) el-input：有后缀图标时，给右边腾位置（suffix-icon / clear / show-password 都属于 suffix） */
+.el-input--suffix .el-input__inner {
+  padding-right: 44px !important;
+}
+
+/* 3) show-password 的眼睛图标通常更占位，右侧再加一点 */
+.el-input .el-input__suffix,
+.el-input .el-input__prefix {
+  display: flex;
+  align-items: center;
+}
+
+/* 可选：让图标区域宽度更稳定（避免图标挤压文字） */
+.el-input__prefix {
+  width: 40px;
+  justify-content: center;
+}
+.el-input__suffix {
+  width: 40px;
+  justify-content: center;
+}
+
+/* 4) 兼容 textarea（如果你项目用到） */
+.el-textarea__inner {
+  padding-left: 14px; /* textarea 通常不放 prefix-icon；这里保持正常 */
+}
+
+/* ===== 你自定义 absolute icon 的通用修复（适用于 .input-wrapper 这种写法） ===== */
+/* 只要你页面用了 .input-wrapper 包裹 + .input-icon 绝对定位，就能自动腾出左边空间 */
+.input-wrapper {
+  position: relative;
+}
+.input-wrapper > .input-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* 关键：让 input 腾出左边空间（不依赖 deep，不怕 scoped） */
+.input-wrapper .el-input__inner {
+  padding-left: 46px !important;
+}
+
+/* 右侧如果有 suffix（眼睛/清除），也腾出空间 */
+.input-wrapper .el-input--suffix .el-input__inner {
+  padding-right: 44px !important;
+}

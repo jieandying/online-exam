@@ -1,0 +1,521 @@
+/* ====================================================================
+   管理员端全局浅蓝色主题 - 美观大气
+   ==================================================================== */
+
+/* ==================== 全局CSS变量 ==================== */
+:root {
+  --admin-primary: #3B82F6;
+  --admin-primary-light: #60A5FA;
+  --admin-primary-lighter: #93C5FD;
+  --admin-primary-bg: #EFF6FF;
+  --admin-primary-bg2: #DBEAFE;
+  --admin-gradient: linear-gradient(135deg, #3B82F6 0%, #60A5FA 100%);
+  --admin-gradient-light: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+  --admin-shadow: 0 4px 16px rgba(59, 130, 246, 0.08);
+  --admin-shadow-hover: 0 8px 30px rgba(59, 130, 246, 0.15);
+  --admin-border: rgba(59, 130, 246, 0.12);
+  --admin-radius: 14px;
+  --admin-radius-sm: 10px;
+  --admin-text-primary: #1E293B;
+  --admin-text-secondary: #64748B;
+  --admin-text-muted: #94A3B8;
+}
+
+/* ==================== 内容区域背景 ==================== */
+.content-container {
+  background: rgba(255, 255, 255, 0.85) !important;
+  border: 1px solid var(--admin-border) !important;
+  border-radius: var(--admin-radius) !important;
+  box-shadow: var(--admin-shadow) !important;
+  padding: 32px !important;
+}
+
+.content-container:hover {
+  box-shadow: var(--admin-shadow-hover) !important;
+}
+
+/* ==================== 页面标题区 ==================== */
+.page-header {
+  margin-bottom: 28px !important;
+  padding-bottom: 20px !important;
+  border-bottom: 2px solid var(--admin-primary-bg2) !important;
+}
+
+.page-header h2 {
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  color: var(--admin-text-primary) !important;
+  letter-spacing: 0.3px;
+}
+
+.page-header h2 i {
+  color: var(--admin-primary) !important;
+  font-size: 24px !important;
+}
+
+/* ==================== 若依风格卡片 ==================== */
+.ruoyi-container {
+  padding: 0 !important;
+  background-color: transparent !important;
+}
+
+.ruoyi-card {
+  background: #fff !important;
+  border-radius: var(--admin-radius) !important;
+  box-shadow: var(--admin-shadow) !important;
+  margin-bottom: 20px !important;
+  border: 1px solid var(--admin-border) !important;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.2s ease !important;
+}
+
+.ruoyi-card:hover {
+  box-shadow: var(--admin-shadow-hover) !important;
+}
+
+/* ==================== 搜索表单卡片 ==================== */
+.search-card {
+  padding: 24px 28px 12px !important;
+  background: linear-gradient(to bottom, #FAFCFF, #FFFFFF) !important;
+  border-top: 3px solid var(--admin-primary) !important;
+}
+
+.search-form .el-form-item__label,
+.search-card .el-form-item__label {
+  font-weight: 600 !important;
+  color: var(--admin-text-primary) !important;
+  font-size: 14px !important;
+}
+
+.search-card .el-input__inner,
+.search-form .el-input__inner {
+  border-radius: 8px !important;
+  border: 1.5px solid #E2E8F0 !important;
+  height: 38px !important;
+  transition: all 0.3s ease !important;
+}
+
+.search-card .el-input__inner:focus,
+.search-form .el-input__inner:focus {
+  border-color: var(--admin-primary) !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12) !important;
+}
+
+.search-card .el-select .el-input__inner,
+.search-form .el-select .el-input__inner {
+  border-radius: 8px !important;
+}
+
+/* ==================== 工具栏卡片 ==================== */
+.toolbar-card {
+  padding: 16px 24px !important;
+  background: linear-gradient(to right, #FAFCFF, #FFFFFF) !important;
+}
+
+.toolbar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.toolbar-left {
+  display: flex !important;
+  gap: 12px !important;
+}
+
+/* ==================== 表格样式美化 ==================== */
+.table-card {
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+.ruoyi-table,
+.el-table {
+  font-size: 14px !important;
+}
+
+.ruoyi-table th,
+.el-table th {
+  background: linear-gradient(to bottom, #F0F7FF, #E8F1FD) !important;
+  color: var(--admin-text-primary) !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  padding: 14px 0 !important;
+  border-bottom: 2px solid var(--admin-primary-bg2) !important;
+}
+
+.ruoyi-table td,
+.el-table td {
+  padding: 14px 0 !important;
+  color: var(--admin-text-secondary) !important;
+  border-bottom: 1px solid #F1F5F9 !important;
+}
+
+.ruoyi-table .el-table__row:hover > td,
+.el-table .el-table__row:hover > td {
+  background-color: #F0F7FF !important;
+}
+
+.ruoyi-table .el-table__row--striped td,
+.el-table .el-table__row--striped td {
+  background-color: #FAFCFF !important;
+}
+
+/* 表格操作列按钮间距 */
+.el-table .el-button--text {
+  padding: 4px 8px !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+}
+
+.el-table .el-button--text + .el-button--text {
+  margin-left: 4px !important;
+}
+
+/* ==================== 分页器美化 ==================== */
+.ruoyi-pagination,
+.pagination-wrap {
+  padding: 20px !important;
+  text-align: center !important;
+  background: linear-gradient(to top, #FAFCFF, #FFFFFF) !important;
+}
+
+.el-pagination .el-pager li {
+  border-radius: 8px !important;
+  margin: 0 3px !important;
+  font-weight: 500 !important;
+  min-width: 36px !important;
+  height: 36px !important;
+  line-height: 36px !important;
+}
+
+.el-pagination .el-pager li.active {
+  background: var(--admin-gradient) !important;
+  color: #fff !important;
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3) !important;
+}
+
+.el-pagination .el-pager li:hover:not(.active) {
+  color: var(--admin-primary) !important;
+  background: var(--admin-primary-bg) !important;
+}
+
+.el-pagination button {
+  border-radius: 8px !important;
+  min-width: 36px !important;
+  height: 36px !important;
+}
+
+/* ==================== 按钮美化 ==================== */
+.el-button--primary {
+  background: var(--admin-gradient) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.3px;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.25) !important;
+  transition: all 0.3s ease !important;
+}
+
+.el-button--primary:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.35) !important;
+}
+
+.el-button--primary.is-plain {
+  background: var(--admin-primary-bg) !important;
+  color: var(--admin-primary) !important;
+  border: 1.5px solid var(--admin-primary-lighter) !important;
+  box-shadow: none !important;
+}
+
+.el-button--primary.is-plain:hover {
+  background: var(--admin-primary-bg2) !important;
+  color: var(--admin-primary) !important;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15) !important;
+}
+
+.el-button--danger {
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+}
+
+.el-button--danger.is-plain {
+  border-radius: 8px !important;
+}
+
+.el-button--warning {
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+}
+
+.el-button--default,
+.el-button--info {
+  border-radius: 8px !important;
+  font-weight: 500 !important;
+}
+
+/* ==================== 标签美化 ==================== */
+.el-tag {
+  border-radius: 6px !important;
+  font-weight: 500 !important;
+  padding: 0 10px !important;
+  border: none !important;
+}
+
+.el-tag--mini {
+  height: 24px !important;
+  line-height: 24px !important;
+  font-size: 12px !important;
+}
+
+.el-tag--small {
+  height: 28px !important;
+  line-height: 28px !important;
+}
+
+/* ==================== 输入框美化 ==================== */
+.el-input__inner {
+  border-radius: 8px !important;
+  border: 1.5px solid #E2E8F0 !important;
+  transition: all 0.3s ease !important;
+  color: var(--admin-text-primary) !important;
+}
+
+.el-input__inner:focus {
+  border-color: var(--admin-primary) !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+}
+
+.el-input__inner::placeholder {
+  color: var(--admin-text-muted) !important;
+}
+
+/* ==================== 对话框美化 ==================== */
+.el-dialog {
+  border-radius: var(--admin-radius) !important;
+  overflow: hidden !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12) !important;
+}
+
+.el-dialog__header {
+  background: var(--admin-gradient-light) !important;
+  padding: 22px 28px !important;
+  border-bottom: 1px solid var(--admin-border) !important;
+}
+
+.el-dialog__title {
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  color: var(--admin-text-primary) !important;
+}
+
+.el-dialog__body {
+  padding: 28px !important;
+}
+
+.el-dialog__footer {
+  padding: 16px 28px 24px !important;
+  border-top: 1px solid #F1F5F9 !important;
+}
+
+/* ==================== 表单美化 ==================== */
+.el-form-item__label {
+  font-weight: 600 !important;
+  color: var(--admin-text-primary) !important;
+  font-size: 14px !important;
+}
+
+.el-form-item {
+  margin-bottom: 22px !important;
+}
+
+/* ==================== 下拉框美化 ==================== */
+.el-select-dropdown {
+  border-radius: var(--admin-radius-sm) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1) !important;
+  border: 1px solid var(--admin-border) !important;
+}
+
+.el-select-dropdown__item.selected {
+  color: var(--admin-primary) !important;
+  font-weight: 600 !important;
+}
+
+/* ==================== Tabs 美化 ==================== */
+.el-tabs__item {
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  color: var(--admin-text-secondary) !important;
+  padding: 0 24px !important;
+}
+
+.el-tabs__item.is-active {
+  color: var(--admin-primary) !important;
+  font-weight: 700 !important;
+}
+
+.el-tabs__active-bar {
+  background: var(--admin-gradient) !important;
+  height: 3px !important;
+  border-radius: 3px !important;
+}
+
+.el-tabs__nav-wrap::after {
+  height: 1px !important;
+  background: #E2E8F0 !important;
+}
+
+/* ==================== 统计卡片 ==================== */
+.stat-row {
+  display: flex !important;
+  gap: 20px !important;
+  margin-bottom: 24px !important;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F8FBFF 100%) !important;
+  border-radius: var(--admin-radius) !important;
+  padding: 22px 28px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 18px !important;
+  box-shadow: var(--admin-shadow) !important;
+  border: 1px solid var(--admin-border) !important;
+  flex: 1 !important;
+  transition: all 0.3s ease !important;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: var(--admin-shadow-hover) !important;
+}
+
+.stat-icon {
+  width: 52px !important;
+  height: 52px !important;
+  border-radius: 14px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 26px !important;
+  color: #fff !important;
+  background: var(--admin-gradient) !important;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3) !important;
+}
+
+.stat-value {
+  font-size: 28px !important;
+  font-weight: 800 !important;
+  color: var(--admin-text-primary) !important;
+  line-height: 1.2 !important;
+}
+
+.stat-label {
+  font-size: 14px !important;
+  color: var(--admin-text-muted) !important;
+  font-weight: 500 !important;
+  margin-top: 2px !important;
+}
+
+/* ==================== 卡片头部 ==================== */
+.card-header {
+  padding: 20px 28px !important;
+  border-bottom: 1px solid #F1F5F9 !important;
+  background: linear-gradient(to bottom, #FAFCFF, #FFFFFF) !important;
+  border-radius: var(--admin-radius) var(--admin-radius) 0 0 !important;
+}
+
+.card-title {
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  color: var(--admin-text-primary) !important;
+}
+
+.card-title i {
+  margin-right: 10px !important;
+  color: var(--admin-primary) !important;
+  font-size: 18px !important;
+}
+
+/* ==================== 表单卡片 ==================== */
+.ruoyi-form {
+  padding: 32px !important;
+}
+
+.ruoyi-form .el-form-item {
+  margin-bottom: 26px !important;
+}
+
+.form-buttons {
+  margin-top: 36px !important;
+  padding-top: 24px !important;
+  border-top: 2px solid #F1F5F9 !important;
+}
+
+/* ==================== 加载动画 ==================== */
+.el-loading-mask {
+  background-color: rgba(248, 251, 255, 0.9) !important;
+  border-radius: var(--admin-radius) !important;
+}
+
+.el-loading-spinner .path {
+  stroke: var(--admin-primary) !important;
+}
+
+.el-loading-spinner .el-loading-text {
+  color: var(--admin-primary) !important;
+}
+
+/* ==================== 空状态 ==================== */
+.el-table__empty-block {
+  background: #FAFCFF !important;
+}
+
+.el-table__empty-text {
+  color: var(--admin-text-muted) !important;
+}
+
+/* ==================== 滚动条美化 ==================== */
+.el-table__body-wrapper::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.el-table__body-wrapper::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background: var(--admin-primary-lighter);
+}
+
+.el-table__body-wrapper::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+/* ==================== 消息提示美化 ==================== */
+.el-message-box {
+  border-radius: var(--admin-radius) !important;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* ==================== 响应式优化 ==================== */
+@media (max-width: 1200px) {
+  .stat-row {
+    flex-wrap: wrap !important;
+  }
+  .stat-card {
+    flex: 1 1 calc(50% - 10px) !important;
+    min-width: 200px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-container {
+    padding: 20px !important;
+  }
+  .search-card {
+    padding: 18px 20px 8px !important;
+  }
+  .stat-card {
+    flex: 1 1 100% !important;
+  }
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景圆 -->
+  <circle cx="24" cy="24" r="22" fill="#409EFF"/>
+  <circle cx="24" cy="24" r="21" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+  
+  <!-- 试卷 -->
+  <rect x="14" y="10" width="20" height="28" rx="2" fill="white"/>
+  
+  <!-- 试卷头部 -->
+  <rect x="14" y="10" width="20" height="6" rx="2" fill="#67C23A"/>
+  
+  <!-- 标题行 -->
+  <rect x="16" y="18" width="12" height="1" fill="#C0C4CC"/>
+  <rect x="16" y="21" width="10" height="1" fill="#E4E7ED"/>
+  
+  <!-- 选择题 -->
+  <circle cx="17" cy="25" r="1.5" fill="#67C23A"/>
+  <rect x="20" y="24" width="10" height="1" fill="#DCDFE6"/>
+  
+  <circle cx="17" cy="28" r="1.5" fill="#E4E7ED"/>
+  <rect x="20" y="27" width="8" height="1" fill="#DCDFE6"/>
+  
+  <circle cx="17" cy="31" r="1.5" fill="#67C23A"/>
+  <rect x="20" y="30" width="12" height="1" fill="#DCDFE6"/>
+  
+  <circle cx="17" cy="34" r="1.5" fill="#E4E7ED"/>
+  <rect x="20" y="33" width="9" height="1" fill="#DCDFE6"/>
+  
+  <!-- 对勾 -->
+  <path d="M16 25 L16.8 25.8 L18.2 24.4" stroke="white" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+  <path d="M16 31 L16.8 31.8 L18.2 30.4" stroke="white" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+  
+  <!-- 成功标记 -->
+  <circle cx="36" cy="36" r="5" fill="#67C23A"/>
+  <path d="M33.5 36 L35 37.5 L38.5 34" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+</svg>
