@@ -1,0 +1,9 @@
+@echo off
+echo Stopping any existing java processes...
+taskkill /F /IM java.exe >nul 2>&1
+
+echo Cleaning and Compiling...
+call mvn clean compile
+
+echo Starting Backend...
+mvn spring-boot:run

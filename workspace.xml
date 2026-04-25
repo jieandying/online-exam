@@ -1,46 +1,228 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="50d31432-c155-4334-8274-b6c3087bbdd2" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="d3b5422d-94ae-45eb-9a6b-fe3d4f5efd2f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectId" id="2qWS8f7qs78nRKizSrHr9JjORPg" />
-  <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="COMPILER_PROCESS_HEAP_SIZE" value="1500" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
     </option>
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2Zwek22hwRvEEAcsRj4NFPmqRQC" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Notification.DisplayName-DoNotAsk-Database detector&quot;: &quot;Database detector&quot;,
+    &quot;Notification.DoNotAsk-Database detector&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Spring Boot.OnlineExamSystemApplication.executor&quot;: &quot;Run&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;database.data.extractors.current.export.id&quot;: &quot;Comma-separated (CSV)_id&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/aiwrite&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;f07c53cc2fc975821f19fa326bca1c65&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;E:\\IntelliJ IDEA 2025.3.2\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql_aurora&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\OnlineExamSystemApi" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\OnlineExamSystemApi\doc" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <myKeys>
+      <visibility group="Gradle Tasks" flag="true" />
+      <visibility group="HTTP Requests" flag="true" />
+      <visibility group="Maven Goals" flag="true" />
+      <visibility group="Recent projects" flag="true" />
+      <visibility group="Run Configurations" flag="true" />
+    </myKeys>
+  </component>
+  <component name="RunManager" selected="Spring Boot.OnlineExamSystemApplication">
+    <configuration name="OnlineExamSystemApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rabbiter.oes.OnlineExamSystemApplication" />
+      <module name="OnlineExamSystemApi" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rabbiter.oes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OnlineExamSystemApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="OnlineExamSystemApi" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.rabbiter.oes.OnlineExamSystemApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rabbiter.oes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.OnlineExamSystemApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.30387.90" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.30387.90" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="50d31432-c155-4334-8274-b6c3087bbdd2" name="Default Changelist" comment="" />
-      <created>1734776679594</created>
+      <changelist id="d3b5422d-94ae-45eb-9a6b-fe3d4f5efd2f" name="Changes" comment="" />
+      <created>1703337709936</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1734776679594</updated>
-      <workItem from="1734776681316" duration="52000" />
+      <updated>1703337709936</updated>
+      <workItem from="1705284885818" duration="1937000" />
+      <workItem from="1705329404411" duration="639000" />
+      <workItem from="1734771166269" duration="18000" />
+      <workItem from="1734776126182" duration="1614000" />
+      <workItem from="1735021785366" duration="50000" />
+      <workItem from="1743227288292" duration="185000" />
+      <workItem from="1743227543261" duration="1291000" />
+      <workItem from="1743699750557" duration="1123000" />
+      <workItem from="1758074432137" duration="2997000" />
+      <workItem from="1758678724319" duration="689000" />
+      <workItem from="1760090365649" duration="13665000" />
+      <workItem from="1760105622081" duration="31000" />
+      <workItem from="1766407175181" duration="3386000" />
+      <workItem from="1766722210440" duration="2072000" />
+      <workItem from="1766796486235" duration="1601000" />
+      <workItem from="1767063749705" duration="2376000" />
+      <workItem from="1767078004949" duration="12622000" />
+      <workItem from="1767247016288" duration="230000" />
+      <workItem from="1767247252467" duration="617000" />
+      <workItem from="1767247880264" duration="193000" />
+      <workItem from="1767248084849" duration="39000" />
+      <workItem from="1767248129933" duration="1262000" />
+      <workItem from="1767424003719" duration="90000" />
+      <workItem from="1767424102971" duration="1147000" />
+      <workItem from="1767425394219" duration="44000" />
+      <workItem from="1767608061544" duration="21000" />
+      <workItem from="1767856312570" duration="11746000" />
+      <workItem from="1767869337649" duration="1624000" />
+      <workItem from="1767870991368" duration="9834000" />
+      <workItem from="1767880848902" duration="2432000" />
+      <workItem from="1767883291735" duration="1045000" />
+      <workItem from="1767920957469" duration="7721000" />
+      <workItem from="1767929397163" duration="20058000" />
+      <workItem from="1768025020166" duration="1054000" />
+      <workItem from="1768198085653" duration="18000" />
+      <workItem from="1768219916616" duration="236000" />
+      <workItem from="1768220175317" duration="3275000" />
+      <workItem from="1768279890812" duration="2648000" />
+      <workItem from="1769490623877" duration="111000" />
+      <workItem from="1770908053372" duration="122000" />
+      <workItem from="1770952362982" duration="21000" />
+      <workItem from="1774865161574" duration="1534000" />
+      <workItem from="1774870497525" duration="23000" />
+      <workItem from="1774870546003" duration="5109000" />
+      <workItem from="1774956817809" duration="1728000" />
+      <workItem from="1775026131595" duration="36000" />
+      <workItem from="1775026188166" duration="7577000" />
+      <workItem from="1775037850152" duration="5196000" />
+      <workItem from="1775043072661" duration="3440000" />
+      <workItem from="1775046561838" duration="200000" />
+      <workItem from="1775046779364" duration="159000" />
+      <workItem from="1775046950971" duration="622000" />
+      <workItem from="1775047599032" duration="2100000" />
+      <workItem from="1775049716045" duration="1342000" />
+      <workItem from="1775051081999" duration="40000" />
+      <workItem from="1775051138079" duration="1995000" />
+      <workItem from="1775211211906" duration="11000" />
+      <workItem from="1775211396860" duration="56000" />
+      <workItem from="1775211478070" duration="5480000" />
+      <workItem from="1775217674079" duration="341000" />
+      <workItem from="1775218034877" duration="2213000" />
+      <workItem from="1775634828344" duration="6075000" />
+      <workItem from="1775659779886" duration="2989000" />
+      <workItem from="1775696463530" duration="1583000" />
+      <workItem from="1775698410110" duration="2947000" />
+      <workItem from="1776665947591" duration="5000" />
+      <workItem from="1777009322871" duration="28000" />
+      <workItem from="1777009484410" duration="107000" />
+      <workItem from="1777078260859" duration="41000" />
+      <workItem from="1777078428032" duration="454000" />
+      <workItem from="1777084766732" duration="1859000" />
+      <workItem from="1777086670888" duration="2564000" />
+      <workItem from="1777102828817" duration="16000" />
+      <workItem from="1777103482746" duration="158000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
